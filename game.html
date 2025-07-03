@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slither Game</title>
+    <link rel="stylesheet" href="game.css">
+</head>
+<body>
+    <div id="startScreen">
+        <h2>🐍 Welcome to Snake Game!</h2>
+         <input type="text" id="playerInput" placeholder="Enter your name" />
+         <p id="nameError" style="color: #b95800; font-weight: bold; display: none;"></p>
+            <div class="difficulty-selection">
+                <p><strong>Select Difficulty:</strong></p>
+               <label><input type="radio" name="difficulty" value="easy"> Easy 🐢</label><br>
+               <label><input type="radio" name="difficulty" value="medium" checked> Medium 🐍</label><br>
+               <label><input type="radio" name="difficulty" value="hard"> Hard 🐉</label>
+            </div>
+
+        <button id="startGameBtn">Start Game</button>
+        <div class="leaderboard">
+         <h3>🏆 Leaderboard (Top 3)</h3>
+         <ul id="leaderboardList"></ul>
+        </div>
+    </div>
+    <div class="container" id="container" style="display : none">
+        <div class="controls">
+         <button id="startBtn">Start</button>
+         <button id="pauseBtn">Pause</button>
+       </div>
+  
+        <div class="score-container">
+          <div id="scorebox">Score : 0</div>
+          <div id="highscorebox">HighScore : 0</div>
+        </div>
+        <h1>Slither Game</h1>
+        <div class="playarea"></div>
+    </div>
+    <div id="gameOverScreen" style="display: none; text-align: center;">
+        <h2>💀 Game Over!</h2>
+        <p id="finalScoreText"></p>
+        <button id="restartBtn">Restart</button>
+        <button id="menuBtn">Main Menu</button>
+    </div>
+    <script src="game.js"></script>
+</body>
+</html>
